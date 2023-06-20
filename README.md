@@ -1,14 +1,7 @@
-![Build](https://github.com/vector-im/element-desktop/actions/workflows/build.yaml/badge.svg)
-![Static Analysis](https://github.com/vector-im/element-desktop/actions/workflows/static_analysis.yaml/badge.svg)
-[![Weblate](https://translate.element.io/widgets/element-desktop/-/element-desktop/svg-badge.svg)](https://translate.element.io/engage/element-desktop/)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=element-desktop&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=element-desktop)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=element-desktop&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=element-desktop)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=element-desktop&metric=bugs)](https://sonarcloud.io/summary/new_code?id=element-desktop)
-
 Element Desktop
 ===============
 
-Element Desktop is a Matrix client for desktop platforms with Element Web at its core.
+Element Desktop is a Matrix client for desktop platforms with KB-Chat Web at its core.
 
 First Steps
 ===========
@@ -50,8 +43,8 @@ yarn run fetch --noverify --cfgdir "" v1.5.6
 If you only want to run the app locally and don't need to build packages, you can
 provide the `webapp` directory directly:
 ```
-# Assuming you've checked out and built a copy of element-web in ../element-web
-ln -s ../element-web/webapp ./
+# Assuming you've checked out and built a copy of element-web in ../kb-chat-web
+ln -s ../kb-chat-web/webapp ./
 ```
 
 [TODO: add support for fetching develop builds, arbitrary URLs and arbitrary paths]
@@ -63,7 +56,7 @@ Building
 
 TODO: List native pre-requisites
 
-Optionally, [build the native modules](https://github.com/vector-im/element-desktop/blob/develop/docs/native-node-modules.md), 
+Optionally, [build the native modules](https://github.com/bkarich/kb-chat-desktop/blob/develop/docs/native-node-modules.md), 
 which include support for searching in encrypted rooms and secure storage. Skipping this step is fine, you just won't have those features.  
 
 Then, run
@@ -119,7 +112,7 @@ Profiles
 
 To run multiple instances of the desktop app for different accounts, you can
 launch the executable with the `--profile` argument followed by a unique
-identifier, e.g `element-desktop --profile Work` for it to run a separate profile and
+identifier, e.g `kb-chat-desktop --profile Work` for it to run a separate profile and
 not interfere with the default one.
 
 Alternatively, a custom location for the profile data can be specified using the
@@ -140,9 +133,9 @@ the above created by a pre-1.7 install, in which case it will be `Riot` or
 Translations
 ==========================
 
-To add a new translation, head to the [translating doc](https://github.com/vector-im/element-web/blob/develop/docs/translating.md).
+To add a new translation, head to the [translating doc](https://github.com/bkarich/kb-chat-web/blob/develop/docs/translating.md).
 
-For a developer guide, see the [translating dev doc](https://github.com/vector-im/element-web/blob/develop/docs/translating-dev.md).
+For a developer guide, see the [translating dev doc](https://github.com/bkarich/kb-chat-web/blob/develop/docs/translating-dev.md).
 
 [<img src="https://translate.element.io/widgets/element-desktop/-/multi-auto.svg" alt="translationsstatus" width="340">](https://translate.element.io/engage/element-desktop/?utm_source=widget)
 
@@ -151,4 +144,4 @@ Report bugs & give feedback
 
 If you run into any bugs or have feedback you'd like to share, please let us know on GitHub.
 
-To help avoid duplicate issues, please [view existing issues](https://github.com/vector-im/element-web/issues?q=is%3Aopen+is%3Aissue+sort%3Areactions-%2B1-desc) first (and add a +1) or [create a new issue](https://github.com/vector-im/element-web/issues/new/choose) if you can't find it.  Please note that this issue tracker is associated with the [element-web](https://github.com/vector-im/element-web) repo, but is also applied to the code in this repo as well.
+To help avoid duplicate issues, please [view existing issues](https://github.com/bkarich/kb-chat-web/issues?q=is%3Aopen+is%3Aissue+sort%3Areactions-%2B1-desc) first (and add a +1) or [create a new issue](https://github.com/bkarich/kb-chat-web/issues/new/choose) if you can't find it.  Please note that this issue tracker is associated with the [element-web](https://github.com/bkarich/kb-chat-web/) repo, but is also applied to the code in this repo as well.
