@@ -11,21 +11,21 @@ Before you do anything else, fetch the dependencies:
 yarn install
 ```
 
-Fetching Element
+Fetching KB-Chat
 ================
-Since this package is just the Electron wrapper for Element Web, it doesn't contain any of the Element Web code,
-so the first step is to get a working copy of Element Web. There are a few ways of doing this:
+Since this package is just the Electron wrapper for KB-Chat Web, it doesn't contain any of the KB-Chat Web code,
+so the first step is to get a working copy of KB-Chat Web. There are a few ways of doing this:
 
 ```
-# Fetch the prebuilt release Element package from the element-web GitHub releases page. The version
-# fetched will be the same as the local element-desktop package.
-# We're explicitly asking for no config, so the packaged Element will have no config.json.
+# Fetch the prebuilt release KB-Chat package from the kb-chat-web GitHub releases page. The version
+# fetched will be the same as the local KB-Chat-desktop package.
+# We're explicitly asking for no config, so the packaged KB-Chat will have no config.json.
 yarn run fetch --noverify --cfgdir ""
 ```
 
 ...or if you'd like to use GPG to verify the downloaded package:
 ```
-# Fetch the Element public key from the element.io web server over a secure connection and import
+# Fetch the KB-Chat public key from the chat.klabausterbeere.xyz web server over a secure connection and import
 # it into your local GPG keychain (you'll need GPG installed). You only need to to do this
 # once.
 yarn run fetch --importkey
@@ -33,17 +33,17 @@ yarn run fetch --importkey
 yarn run fetch --cfgdir ""
 ```
 
-...or either of the above, but fetching a specific version of Element:
+...or either of the above, but fetching a specific version of KB-Chat:
 ```
-# Fetch the prebuilt release Element package from the element-web GitHub releases page. The version
-# fetched will be the same as the local element-desktop package.
+# Fetch the prebuilt release Element package from the KB-Chat-web GitHub releases page. The version
+# fetched will be the same as the local KB-Chat-desktop package.
 yarn run fetch --noverify --cfgdir "" v1.5.6
 ```
 
 If you only want to run the app locally and don't need to build packages, you can
 provide the `webapp` directory directly:
 ```
-# Assuming you've checked out and built a copy of element-web in ../kb-chat-web
+# Assuming you've checked out and built a copy of KB-Chat-web in ../kb-chat-web
 ln -s ../kb-chat-web/webapp ./
 ```
 
@@ -65,7 +65,7 @@ yarn run build
 ```
 This will do a couple of things:
  * Run the `setversion` script to set the local package version to match whatever
-   version of Element you installed above.
+   version of KB-Chat you installed above.
  * Run electron-builder to build a package. The package built will match the operating system
    you're running the build process on.
 
@@ -96,7 +96,7 @@ yarn start
 
 Config
 ======
-If you'd like the packaged Element to have a configuration file, you can create a
+If you'd like the packaged KB-Chat to have a configuration file, you can create a
 config directory and place `config.json` in there, then specify this directory
 with the `--cfgdir` option to `yarn run fetch`, eg:
 ```
@@ -104,8 +104,8 @@ mkdir myconfig
 cp /path/to/my/config.json myconfig/
 yarn run fetch --cfgdir myconfig
 ```
-The config dir for the official Element app is in `element.io`. If you use this,
-your app will auto-update itself using builds from element.io.
+The config dir for the official KB-Chat app is in `klabausterbeere.xyz`. If you use this,
+your app will auto-update itself using builds from klabausterbeere.xyz.
 
 Profiles
 ========
