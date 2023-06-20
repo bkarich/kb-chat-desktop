@@ -1,7 +1,7 @@
-Element Desktop
+KB-Chat Desktop
 ===============
 
-Element Desktop is a Matrix client for desktop platforms with KB-Chat Web at its core.
+KB-Chat Desktop is a Matrix client for desktop platforms with KB-Chat Web at its core.
 
 First Steps
 ===========
